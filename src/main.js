@@ -1,26 +1,26 @@
-import { createApp } from "vue";
-import ArcoVue from "@arco-design/web-vue";
-import ArcoVueIcon from "@arco-design/web-vue/es/icon";
+import { createApp } from 'vue'
+import ArcoVue from '@arco-design/web-vue'
+import ArcoVueIcon from '@arco-design/web-vue/es/icon'
 
-import globalComponents from "@/components";
-import App from "./App.vue";
-import router from "./router";
-import store from "./store";
-import i18n from "@/i18n";
-import directives from "./directives";
+import globalComponents from '@/components'
+import App from './App.vue'
+import router from './router'
+import store from './store'
+import i18n from '@/i18n'
+import directives from './directives'
 
 // 官方样式
 // import '@arco-design/web-vue/dist/arco.css'
 // MineAdmin-V2样式
-import "@arco-themes/vue-mine-admin-v2/index.less";
-import "./style/skin.less";
-import "./style/index.css";
-import "./style/global.less";
+import '@arco-themes/vue-mine-admin-v2/index.less'
+import './style/skin.less'
+import './style/index.css'
+import './style/global.less'
 
-import tool from "@/utils/tool";
-import * as common from "@/utils/common";
+import tool from '@/utils/tool'
+import * as common from '@/utils/common'
 
-const app = createApp(App);
+const app = createApp(App)
 
 app
   .use(ArcoVue, {})
@@ -29,22 +29,22 @@ app
   .use(store)
   .use(i18n)
   .use(directives)
-  .use(globalComponents);
+  .use(globalComponents)
 
 // 注册ma-icon图标
-const modules = import.meta.globEager("./assets/ma-icons/*.vue");
+const modules = import.meta.globEager('./assets/ma-icons/*.vue')
 for (const path in modules) {
-  const name = path.match(/([A-Za-z0-9_-]+)/g)[2];
-  const componentName = `MaIcon${name}`;
-  app.component(componentName, modules[path].default);
+  const name = path.match(/([A-Za-z0-9_-]+)/g)[2]
+  const componentName = `MaIcon${name}`
+  app.component(componentName, modules[path].default)
 }
 
-app.config.globalProperties.$tool = tool;
-app.config.globalProperties.$common = common;
-app.config.globalProperties.$title = import.meta.env.VITE_APP_TITLE;
-app.config.globalProperties.$url = import.meta.env.VITE_APP_BASE;
+app.config.globalProperties.$tool = tool
+app.config.globalProperties.$common = common
+app.config.globalProperties.$title = import.meta.env.VITE_APP_TITLE
+app.config.globalProperties.$url = import.meta.env.VITE_APP_BASE
 
-app.mount("#app");
+app.mount('#app')
 
-tool.capsule("综合站群管理系统", `1.2.0`, "primary");
-tool.capsule("Developed by M3", "Archer", "success");
+tool.capsule('AVX综管中心', `1.3.0`, 'primary')
+tool.capsule('Developed by Archer', 'Archer', 'success')

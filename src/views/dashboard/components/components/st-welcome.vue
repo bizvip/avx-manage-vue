@@ -86,7 +86,7 @@
             </a-space>
           </div>
           <div class="leading-5 mt-2">
-            欢迎使用综合站群管理系统，您的一站式贴心管理中心
+            欢迎使用AVX综管中心，您的一站式贴心管理中心
           </div>
         </div>
       </div>

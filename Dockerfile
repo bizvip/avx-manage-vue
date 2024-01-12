@@ -16,9 +16,7 @@ RUN yarn config set registry http://mirrors.cloud.tencent.com/npm/
 
 RUN npm config set registry http://mirrors.cloud.tencent.com/npm/
 
-
 RUN yarn config list
-
 
 RUN yarn install && \
     if [ "$NODE_ENV" = "development" ]; then yarn build --mode development; fi && \
