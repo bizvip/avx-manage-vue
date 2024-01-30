@@ -2,7 +2,7 @@ export default {
   // 当前crud组件的 id，全局唯一，不指定则随机生成一个
   id: undefined,
   // 主键名称
-  pk: "id",
+  pk: 'id',
   // 表单是否排除PK
   formExcludePk: true,
   // 请求api方法
@@ -14,17 +14,17 @@ export default {
   // 请求参数
   requestParams: {},
   // 设置分页组件每页记录数
-  pageSizeOption: [13, 100],
+  pageSizeOption: [10, 100],
   // 是否开启表格分页
   tablePagination: false,
   // 设置选择列
   rowSelection: undefined,
   // 是否显示边框
-  bordered: { wrapper: false, cell: false },
+  bordered: { wrapper: true, cell: true },
   // 是否开启拖拽排序
   dragSort: true,
   // 每页记录数
-  pageSize: 13,
+  pageSize: 10,
   // 子节点为空隐藏节点按钮
   hideExpandButtonOnEmpty: true,
   // 默认展开所有行
@@ -32,19 +32,19 @@ export default {
   // 默认展开搜索
   expandSearch: true,
   // 斑马线
-  stripe: true,
+  stripe: false,
   // 新增、编辑、删除完成后是否刷新表格
   dataCompleteRefresh: true,
   // 表格大小
-  size: "small",
+  size: 'small',
   // 是否开启双击编辑数据
-  isDbClickEdit: true,
+  isDbClickEdit: false,
   // 是否显示展开/折叠按钮
   isExpand: true,
   // 是否显示自定义
   showExpandRow: true,
   // 是否显示总结行
-  showSummary: false,
+  showSummary: true,
   // 自定义总结行，要传入函数
   customerSummary: false,
   // 是否显示工具栏
@@ -52,34 +52,33 @@ export default {
   // 表头是否吸顶
   stickyHeader: true,
   // 页面布局方式，支持 normal（标准）和 fixed（固定）两种
-  pageLayout: "normal",
+  pageLayout: 'normal',
   // 默认统一设置列宽度
   columnWidth: 100,
   // 搜索标签对齐方式
-  searchLabelAlign: "right",
+  searchLabelAlign: 'right',
   // 全局搜索标签宽度
-  searchLabelWidth: "85px",
+  searchLabelWidth: '85px',
   // 搜索每行列数
   searchColNumber: 4,
   // 搜索提交按钮文案
-  searchSubmitButtonText: "搜索",
+  searchSubmitButtonText: '搜索',
   // 搜索重置按钮文案
-  searchResetButtonText: "重置",
+  searchResetButtonText: '重置',
   // 搜索栏加载提示文案
-  searchLoadingText: "加载数据中...",
-
+  searchLoadingText: '加载数据中...',
   // 搜索提交前置方法
   beforeSearch: (requestParams) => {},
   // 搜索提交后置方法
   afterSearch: (requestParams) => {},
-
   // 重置搜索钩子
   resetSearch: (searchData) => {},
-
   // 请求前置处理
   beforeRequest: (requestParams) => {},
   // 请求后置处理
-  afterRequest: (tableData) => {},
+  afterRequest: (tableData) => {
+    console.log(tableData)
+  },
   // 新增打开前方法
   beforeOpenAdd: () => {},
   // 新增提交前方法
@@ -103,9 +102,9 @@ export default {
   // 列表 选项卡 参数配置项
   tabs: {
     // 选项卡类型，参考 arco 官方 tabs 的api
-    type: "line",
+    type: 'line',
     // 选项卡触发方式： click | hover
-    trigger: "click",
+    trigger: 'click',
     // 指定一个字段作为选项卡，该字段的 search 必须为 true， 并且使用了字典
     dataIndex: undefined,
     // 自定义选项卡项 [{ label: 'tab 1', value: 1, disabled: false }]，也可函数返回一个数组
@@ -123,11 +122,11 @@ export default {
   // 表单配置项
   formOption: {
     // 显示方式支持模态框和抽屉: modal drawer tag
-    viewType: "modal",
+    viewType: 'modal',
     // 只有 viewType 为 tag 时生效，此值在所有 MaCrud 内唯一
-    tagId: "",
+    tagId: '',
     // 只有 viewType 为 tag 时生效，tag标题名称
-    tagName: "",
+    tagName: '',
     // tag页设置标签标题的字段名称
     titleDataIndex: undefined,
     // 显示宽度
@@ -145,7 +144,7 @@ export default {
     // 显示新增按钮的角色
     role: [],
     // 按钮文案
-    text: "新增",
+    text: '新增',
     // 是否显示
     show: false,
   },
@@ -157,7 +156,7 @@ export default {
     // 显示编辑按钮的角色
     role: [],
     // 按钮文案
-    text: "编辑",
+    text: '编辑',
     // 是否显示
     show: false,
   },
@@ -169,7 +168,7 @@ export default {
     // 显示删除按钮的角色
     role: [],
     // 按钮文案
-    text: "删除",
+    text: '删除',
 
     // 真实删除api
     realApi: undefined,
@@ -178,7 +177,7 @@ export default {
     // 显示真实删除按钮的角色
     realRole: [],
     // 真实按钮文案
-    realText: "删除",
+    realText: '删除',
 
     // 是否显示
     show: false,
@@ -191,7 +190,7 @@ export default {
     // 显示恢复按钮的角色
     role: [],
     // 按钮文案
-    text: "恢复",
+    text: '恢复',
     // 是否显示
     show: false,
   },
@@ -215,7 +214,7 @@ export default {
     // 显示导入按钮的角色
     role: [],
     // 按钮文案
-    text: "导入",
+    text: '导入',
     // 是否显示
     show: false,
   },
@@ -227,7 +226,7 @@ export default {
     // 显示导出按钮的角色
     role: [],
     // 按钮文案
-    text: "导出",
+    text: '导出',
     // 是否显示
     show: false,
   },
@@ -236,15 +235,15 @@ export default {
   // 是否显示索引列
   showIndex: false,
   // 索引列名称
-  indexLabel: "序号",
+  indexLabel: '序号',
   // 索引列宽度
   indexColumnWidth: 70,
   // 索引列固定方向，false 为不固定
-  indexColumnFixed: "left",
+  indexColumnFixed: 'left',
   // 设置请求数据label
   requestParamsLabel: undefined,
   // 表格滚动默认宽高
-  scroll: { x: "100%", y: "100%" },
+  scroll: { x: '100%', y: '100%' },
   // 调整列宽
   resizable: true,
   // 是否显示操作列
@@ -254,11 +253,11 @@ export default {
   // 操作列宽度 (新api)
   operationColumnWidth: 160,
   // 操作列名称
-  operationColumnText: "操作",
+  operationColumnText: '操作',
   // 操作列文字对齐方式
-  operationColumnAlign: "right",
+  operationColumnAlign: 'right',
   // 操作列固定方向，false 为不固定
-  operationColumnFixed: "right",
+  operationColumnFixed: 'right',
 
   // 右键菜单配置
   contextMenu: {
@@ -266,12 +265,12 @@ export default {
     enabled: true,
     // 右键菜单配置
     items: [
-      { operation: "refresh" },
-      { operation: "print" },
+      { operation: 'refresh' },
+      { operation: 'print' },
       // { operation: 'divider' },
       // { operation: 'add' },
       // { operation: 'edit' },
       // { operation: 'delete' }
     ],
   },
-};
+}
