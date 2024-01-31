@@ -139,6 +139,17 @@ const columns = reactive([
     },
   },
   {
+    title: "入口网址",
+    dataIndex: "enter_url",
+    formType: "input",
+    search: false,
+    commonRules: {
+      required: true,
+      message: "请输入蜘蛛程序入口网址",
+    },
+    width: 200,
+  },
+  {
     title: "是否启用",
     dataIndex: "is_enabled",
     formType: "radio",
