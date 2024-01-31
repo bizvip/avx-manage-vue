@@ -9,8 +9,8 @@
         <a-typography-text> 排序 ：排序数字 小 -> 大</a-typography-text>
         <icon-notification />
         <a-typography-text
-          >本广告位图片标准比例：400(宽) x 90(高)</a-typography-text
-        >
+          >本广告位图片标准比例：400(宽) x 90(高)
+        </a-typography-text>
       </a-space>
     </a-alert>
     <div class="ma-content-block lg:flex justify-between p-4">
@@ -114,17 +114,9 @@ const options = reactive({
   beforeRequest: (params) => {
     params.orderBy = "sort";
     params.orderType = "asc";
-    params.site_id = SITE_ID;
-    params.position = POS;
   },
-  beforeAdd: (formData) => {
-    formData.site_id = SITE_ID;
-    formData.position = POS;
-  },
-  beforeEdit: (formData) => {
-    formData.site_id = SITE_ID;
-    formData.position = POS;
-  },
+  beforeAdd: (formData) => {},
+  beforeEdit: (formData) => {},
   beforeDelete: () => {
     return true;
   },
