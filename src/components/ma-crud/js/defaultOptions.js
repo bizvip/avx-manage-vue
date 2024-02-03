@@ -14,17 +14,17 @@ export default {
   // 请求参数
   requestParams: {},
   // 设置分页组件每页记录数
-  pageSizeOption: [13, 100],
+  pageSizeOption: [10, 100],
   // 是否开启表格分页
   tablePagination: false,
   // 设置选择列
   rowSelection: undefined,
   // 是否显示边框
-  bordered: { wrapper: true, cell: true },
+  bordered: { wrapper: false, cell: false },
   // 是否开启拖拽排序
   dragSort: true,
   // 每页记录数
-  pageSize: 13,
+  pageSize: 10,
   // 子节点为空隐藏节点按钮
   hideExpandButtonOnEmpty: true,
   // 默认展开所有行
@@ -36,7 +36,7 @@ export default {
   // 新增、编辑、删除完成后是否刷新表格
   dataCompleteRefresh: true,
   // 表格大小
-  size: "small",
+  size: "medium",
   // 是否开启双击编辑数据
   isDbClickEdit: false,
   // 是否显示展开/折叠按钮
@@ -52,13 +52,13 @@ export default {
   // 表头是否吸顶
   stickyHeader: true,
   // 页面布局方式，支持 normal（标准）和 fixed（固定）两种
-  pageLayout: "normal",
+  pageLayout: "fixed",
   // 默认统一设置列宽度
   columnWidth: 100,
   // 搜索标签对齐方式
   searchLabelAlign: "right",
   // 全局搜索标签宽度
-  searchLabelWidth: "85px",
+  searchLabelWidth: "100px",
   // 搜索每行列数
   searchColNumber: 4,
   // 搜索提交按钮文案

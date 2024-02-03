@@ -7,7 +7,7 @@
           height="108"
           fit="contain"
           :alt="record.title"
-          :src="record.screenshot"
+          :src="`/runtime/${record.site_name}/screenshots/${record.screenshot}`"
         />
       </template>
     </ma-crud>
@@ -106,9 +106,9 @@ const columns = reactive([
     width: 180,
   },
   {
-    title: "截图地址",
+    title: "爬虫访问页截图",
     dataIndex: "screenshot",
-    formType: "upload",
+    formType: "input",
     addDisplay: false,
     editDisplay: false,
   },
@@ -132,11 +132,19 @@ const columns = reactive([
   {
     title: "是否成功",
     dataIndex: "is_success",
-    formType: "input",
+    formType: "radio",
     search: true,
     addDisplay: false,
     editDisplay: false,
     width: 60,
+    dict: {
+      name: "yes_no",
+      props: {
+        label: "title",
+        value: "key",
+      },
+      translation: true,
+    },
   },
   {
     title: "重复访问次数",
