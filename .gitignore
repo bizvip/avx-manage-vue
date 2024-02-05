@@ -5,4 +5,5 @@ dist
 dist-ssr
 *.local
 .idea
-/resources
+/public/runtime
+/public/storage
