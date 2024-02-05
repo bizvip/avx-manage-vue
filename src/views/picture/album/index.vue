@@ -94,7 +94,7 @@ const columns = reactive([
     },
   },
   {
-    title: "相册名（简体中文）",
+    title: "相册名简体",
     dataIndex: "cn_name",
     formType: "input",
     search: true,
@@ -105,14 +105,14 @@ const columns = reactive([
     width: 250,
   },
   {
-    title: "相册名（繁体中文 )",
+    title: "相册名繁体",
     dataIndex: "tw_name",
     formType: "input",
     search: true,
     hide: true,
   },
   {
-    title: "相册名（英文）",
+    title: "相册英文名",
     dataIndex: "en_name",
     formType: "input",
     search: true,
@@ -128,7 +128,7 @@ const columns = reactive([
     },
   },
   {
-    title: "相册封面缩略图",
+    title: "封面缩略图",
     dataIndex: "thumb_src",
     formType: "upload",
     commonRules: {
@@ -182,7 +182,7 @@ const columns = reactive([
     },
   },
   {
-    title: "是否敏感内容",
+    title: "是否敏感",
     dataIndex: "is_sensitive",
     formType: "radio",
     search: true,
@@ -204,7 +204,7 @@ const columns = reactive([
     },
   },
   {
-    title: "是否色情内容",
+    title: "是否色情",
     dataIndex: "is_porn",
     formType: "radio",
     search: true,

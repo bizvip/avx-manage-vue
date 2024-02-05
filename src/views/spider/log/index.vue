@@ -3,8 +3,8 @@
     <ma-crud :options="options" :columns="columns" ref="crudRef">
       <template #screenshot="{ record }">
         <a-image
-          width="192"
-          height="108"
+          width="80"
+          height="50"
           fit="contain"
           :alt="record.title"
           :src="`/runtime/${record.site_name}/screenshots/${record.screenshot}`"
