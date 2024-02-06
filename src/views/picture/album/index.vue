@@ -70,8 +70,8 @@ const options = reactive({
     auth: ["picture:album:recovery"],
   },
   beforeRequest: (params) => {
-    params.orderBy = "id";
-    params.orderType = "desc";
+    // params.orderBy = "id";
+    // params.orderType = "desc";
   },
   beforeAdd: (formData) => {},
   beforeEdit: (formData) => {},
